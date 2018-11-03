@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+.bgimg { 
+  background-image: url("https://in.all.biz/img/in/catalog/537491.jpeg");
+   height:500px; 
+   width:860px ; 
+   background-repeat: no-repeat;
+   } 
+ #demo { 
+       
+       color: white;  
+       padding: 30px;  
+       font-size: 50px; 
+       padding-top: 100px;
+ }  
+#leo{ 
+
+ } 
+ 
+ #p {
+    margin-left:70px;
+	margin-top:60px;
+	width: 5%;
+	height: 50px;
+	background: silver;
+	border: none;
+	color: white;
+	font-size: 14px;
+	font-weight: 700;
+	}
+</style>
+
+<body>
+<div class="bgimg"><center>
+<p  id="demo"></center></p>
+
+<button id="p" > next </button>
+ 
+<script>
+var buenas =0;
+var total =0;
+var i=0;
+var result;
+var result_2;
+
+
+
+{
+
+var num1=Math.floor(Math.random() * 10);
+var num2=Math.floor(Math.random() * 10);
+var operador=Math.floor(Math.random() * 3);
+
+
+switch (operador)
+ {
+    case 0:
+        result = num1 +" + "+ num2+ " = ";
+		result_2= Number(num1+ num2);
+        break;
+    case 1:
+        result = num1 +" - "+ num2+ " = ";
+		result_2= Number(num1- num2);
+        break;
+    case 2:
+        result = num1 +" X "+ num2+ " = ";
+		result_2= Number(num1* num2);
+        break;
+  
+
+
+}
+ 
+document.getElementById("demo").innerHTML = result +" <input id=leo type=text ><button type=submit onclick=verifica()>Submit</button>";
+
+
+document.getElementById("demo").onclick = result +" <button type=next onclick=()>Next</button>";
+    if(p == result){
+        document.getElementById("demo").innerHTML = result +" <input id=leo type=text ><button type=submit onclick=verifica()>Submit</button>";
+    }
+function verifica(){
+var entrada = document.getElementById("leo").value;
+total++;
+if(entrada == result_2)
+{
+buenas++;
+alert("Muy bien tienes "+ buenas + "Acertada ");
+       
+}
+else 
+ alert("Muy mal");
+ if (total ==9)
+ alert(" Promedio es = "+ buenas + "/"+total );
+ }
+ 
+ 
+ }
+</script>
+</div>
+</body>
+</html>
